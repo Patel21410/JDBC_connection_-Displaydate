@@ -12,7 +12,9 @@ public class Util {
 	private static Connection connection;
 	
 	public static Connection openConnection() throws SQLException {
+		if(connection==null){
 		connection=DriverManager.getConnection(url,user,pass);
+		}
 		return connection;
 		
 	}
